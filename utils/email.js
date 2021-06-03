@@ -47,8 +47,8 @@ module.exports = class Email {
 
     // 2) Define email optins
     const mailOptions = {
-      from: this.from, // for development
-      // from: process.env.SENDGRID_EMAIL_FROM, // for production
+      // from: this.from, // for development
+      from: process.env.SENDGRID_EMAIL_FROM, // for production
       to: this.to,
       subject,
       html,
